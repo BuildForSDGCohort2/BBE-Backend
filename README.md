@@ -18,7 +18,7 @@ Requires: Node v8.2+, MongoDB
 
 To build the project and start the server run:
 
-`npm run localdev`
+`npm run dev`
 
 Hot reloading is enabled for development - as you make changes the code will recompile and the server will restart.
 

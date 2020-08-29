@@ -1,12 +1,12 @@
 import express = require('express');
+import { routes } from 'api/routes';
+import * as cors from 'cors';
 import { CorsOptions } from 'cors';
 import { Router } from 'express';
-import * as cors from 'cors';
 import compression = require('compression');
 import bodyParser = require('body-parser');
 import logger = require('morgan');
 import dotenv = require('dotenv');
-import { routes } from 'api/routes';
 const formData = require('express-form-data');
 const os = require('os');
 
@@ -19,9 +19,6 @@ switch (process.env.NODE_ENV) {
     break;
   case 'test':
     dotenv.config({ path: '.env.test' });
-    break;
-  case 'localdev':
-    dotenv.config({ path: '.env.localdev' });
     break;
 }
 

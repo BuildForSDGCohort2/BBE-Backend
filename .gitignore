@@ -16,7 +16,6 @@ tmp
 
 #Build
 develop/
-localdev/
 production/
 
 # API keys and secrets
@@ -41,5 +40,3 @@ dist
 dist/**/*
 dev
 dev/**/*
-localdev
-localdev/**/*

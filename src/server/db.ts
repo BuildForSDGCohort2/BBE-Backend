@@ -15,10 +15,9 @@ export default async () => {
     case 'test':
       dotenv.config({ path: '.env.test' });
       break;
-    case 'localdev':
-      dotenv.config({ path: '.env.localdev' });
-      break;
   }
 
-  return (global.db = await MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost/bbe-development'));
+  return (global.db = await MongoClient.connect(process.env.MONGODB_URI || 'mongodb://localhost/bbe-development', {
+    useUnifiedTopology: true,
+  }));
 };
